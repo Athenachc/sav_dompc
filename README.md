@@ -1,19 +1,4 @@
-# AIRo Control Interface
-This project provides a PX4 based quadrotor UAV control interfaces that supports customized outter-loop controllers. Currently supported controllers include Model Predictive Control (MPC), Backstepping Control (BS), and Sliding-Mode Control(SMC). By using this package you can achieve functions such as auto takeoff/land, RC transmitter control, and follow external trajectory commands with customized outter-loop controllers. The package can be used with both Gazebo simulation or real-world quadrotors with external positioning systems such as Vicon.
-
-If you use this package in your research, please kindly cite the follow reference:
-```
-@article{jiang2022neural,
-  title={Neural network based model predictive control for a quadrotor UAV},
-  author={Jiang, Bailun and Li, Boyang and Zhou, Weifeng and Lo, Li-Yu and Chen, Chih-Keng and Wen, Chih-Yung},
-  journal={Aerospace},
-  volume={9},
-  number={8},
-  pages={460},
-  year={2022},
-  publisher={MDPI}
-}
-```
+# SAV_DOMPC
 
 ## Installation
 
