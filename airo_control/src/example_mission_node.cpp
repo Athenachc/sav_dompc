@@ -6,6 +6,10 @@
 #include <airo_message/FSMInfo.h>
 #include <airo_message/TakeoffLandTrigger.h>
 #include <airo_message/ReferenceStamped.h>
+#include <iostream>
+#include <istream>
+#include <sstream>
+#include <fstream>
 
 geometry_msgs::PoseStamped local_pose;
 airo_message::FSMInfo fsm_info;
@@ -37,7 +41,8 @@ int main(int argc, char **argv)
     airo_message::ReferenceStamped target_pose_1;
     airo_message::ReferenceStamped target_pose_2;
     airo_message::TakeoffLandTrigger takeoff_land_trigger;
-    bool target_1_reached = false;
+    bool target_1_reached = true;
+    int counter = 0;
 
     ros::Subscriber local_pose_sub = nh.subscribe<geometry_msgs::PoseStamped>("/mavros/local_position/pose",100,pose_cb);
     ros::Subscriber fsm_info_sub = nh.subscribe<airo_message::FSMInfo>("/airo_control/fsm_info",10,fsm_info_cb);
@@ -53,8 +58,8 @@ int main(int argc, char **argv)
     target_pose_1.ref.pose.orientation.z = 0.3826;
 
     target_pose_2.ref.pose.position.x = 0;
-    target_pose_2.ref.pose.position.y = 2.5;
-    target_pose_2.ref.pose.position.z = 1.5;
+    target_pose_2.ref.pose.position.y = 0;
+    target_pose_2.ref.pose.position.z = 1;
     target_pose_2.ref.pose.orientation.w = 1.0;
     target_pose_2.ref.pose.orientation.x = 0.0;
     target_pose_2.ref.pose.orientation.y = 0.0;
@@ -96,7 +101,10 @@ int main(int argc, char **argv)
                         if(abs(local_pose.pose.position.x - target_pose_2.ref.pose.position.x)
                          + abs(local_pose.pose.position.y - target_pose_2.ref.pose.position.y)
                          + abs(local_pose.pose.position.z - target_pose_2.ref.pose.position.z) < 0.5){
-                            state = LAND;
+                            std::cout<<"x tracking error: "<<local_pose.pose.position.x - target_pose_2.ref.pose.position.x<<std::endl;
+                            std::cout<<"y tracking error: "<<local_pose.pose.position.y - target_pose_2.ref.pose.position.y<<std::endl;
+                            std::cout<<"z tracking error: "<<local_pose.pose.position.z - target_pose_2.ref.pose.position.z<<std::endl;
+                            // state = LAND;
                         }
                     }
                 }

@@ -142,7 +142,7 @@ geometry_msgs::AccelStamped EKF::observe(
         Eigen::Vector3d Delta_W = EKF::q2ROT(pose.pose.orientation)*Delta_B; // Disturbances in world frame
         
         // Safety range for disturbances
-        safe_dis = 4;
+        safe_dis = 5;
         if (Delta_W.x() > safe_dis || Delta_W.x() < -safe_dis) {
         Delta_W.x() = Delta_W.x() > safe_dis ? safe_dis : -safe_dis;
         }

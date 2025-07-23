@@ -14,7 +14,7 @@
 #include <eigen3/Eigen/Dense>
 
 class BASE_CONTROLLER{
-    protected:
+    public:
         struct Param{
             bool pub_debug = false;
             bool enable_thrust_model = false;

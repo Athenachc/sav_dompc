@@ -75,3 +75,33 @@ target_link_libraries(example_mission_node
   ${catkin_LIBRARIES}
 )
 add_dependencies(example_mission_node airo_message_generate_messages_cpp)
+
+add_executable(aerial_grasp src/aerial_grasp.cpp)
+target_link_libraries(aerial_grasp
+  ${catkin_LIBRARIES}
+)
+
+add_executable(aerial_grasp_dyedwater src/aerial_grasp_dyedwater.cpp)
+target_link_libraries(aerial_grasp_dyedwater
+  ${catkin_LIBRARIES}
+)
+
+add_executable(pwm_open src/pwm_open.cpp)
+target_link_libraries(pwm_open
+  ${catkin_LIBRARIES}
+)
+
+add_executable(pwm_close src/pwm_close.cpp)
+target_link_libraries(pwm_close
+  ${catkin_LIBRARIES}
+)
+
+add_executable(cir src/cir.cpp)
+target_link_libraries(cir
+  ${catkin_LIBRARIES}
+)
+
+add_executable(offboard_land src/offboard_land.cpp)
+target_link_libraries(offboard_land
+  ${catkin_LIBRARIES}
+)

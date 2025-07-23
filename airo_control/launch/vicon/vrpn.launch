@@ -19,7 +19,9 @@
       #- SecondTracker
     </rosparam>
 
-    <remap from="/vrpn_client_node/gh034_alpha/pose" to="/mavros/vision_pose/pose" />
-    <remap from="/vrpn_client_node/gh034_alpha/twist" to="/mavros/vision_speed/speed_vector" />
+    <remap from="/vrpn_client_node/gh034_sav_test/pose" to="/mavros/vision_pose/pose" />
+    <remap from="/vrpn_client_node/gh034_sav_test/twist" to="/mavros/vision_speed/speed_vector" />
+    <remap from="/vrpn_client_node/gh034_sav_obj/pose" to="/vrpn_client_node/gh034_sav_obj/pose"/>
+    <remap from="/vrpn_client_node/gh034_sav_obj/twist" to="/vrpn_client_node/gh034_sav_obj/twist"/>
   </node>
 </launch>

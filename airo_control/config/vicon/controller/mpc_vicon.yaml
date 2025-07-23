@@ -1,13 +1,13 @@
 pub_debug: false
-enable_thrust_model: true
+enable_thrust_model: false
 apply_observer: true
 
 # system parameters
-hover_thrust: 0.31
+hover_thrust: 0.448863 
 enable_preview: true
-tau_phi: 0.1520336055355853
-tau_theta: 0.1413976464134012
-tau_psi: 0.540818835503479
+tau_phi: 0.133616
+tau_theta: 0.13068
+tau_psi: 0.411795
 
 # # conservative costs
 # diag_cost_x:
@@ -37,9 +37,9 @@ tau_psi: 0.540818835503479
 
 # aggressive costs
 diag_cost_x:
-  - 80.0
-  - 80.0
-  - 150.0
+  - 200.0
+  - 200.0
+  - 200.0
   - 80.0
   - 80.0
   - 120.0
@@ -52,9 +52,9 @@ diag_cost_u:
   - 1000.0
   
 diag_cost_xn:
-  - 80.0
-  - 80.0
-  - 150.0
+  - 200.0
+  - 200.0
+  - 200.0
   - 80.0
   - 80.0
   - 120.0

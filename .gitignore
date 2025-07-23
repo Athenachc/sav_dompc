@@ -10,3 +10,4 @@ airo_control/acados_scripts/c_generated_code/main_sim_quadrotor.c
 airo_control/acados_scripts/c_generated_code/acados_solver_quadrotor.c
 airo_control/acados_scripts/c_generated_code/acados_solver_quadrotor.o
 startup/.tmuxinator.yml
+startup/*.bag
