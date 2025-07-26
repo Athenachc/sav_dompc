@@ -43,6 +43,7 @@ Open another terminal or tmux window (if using docker) to run a demo
 rosrun airo_control example_mission_node
 ```
 
-
+## Soft Gripper Control and Fabrication
+For details, please free feel to check this [repo](https://github.com/Athenachc/sav_gripper.git)
 
 
